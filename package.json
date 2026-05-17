@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"if (process.env.RENDER === 'true') require('child_process').execSync('npm ci', { stdio: 'inherit' })\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
