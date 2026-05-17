@@ -15,7 +15,10 @@ export function PoliticianCard({ pol }: { pol: Politician }) {
     <Card className="flex h-full flex-col rounded-2xl border-border bg-card p-6 shadow-card">
       <div className="flex items-start gap-4">
         <Avatar className="h-12 w-12 rounded-xl border border-border">
-          <AvatarImage src={dicebearAvatar(pol.avatarSeed)} alt="" />
+          <AvatarImage
+            src={dicebearAvatar(pol.avatarSeed)}
+            alt={`Illustrated portrait for ${pol.name}`}
+          />
           <AvatarFallback>{pol.name.slice(0, 2)}</AvatarFallback>
         </Avatar>
         <div className="min-w-0 flex-1 space-y-1">

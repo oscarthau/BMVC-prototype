@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 import { pickExchange } from "@/lib/chat-reply";
+import { cn } from "@/lib/utils";
 import {
   defaultFollowUps,
   getConversationPairsForParty,
@@ -38,6 +39,7 @@ export function PoliticianChatPanel({
   heading,
   partyLevel,
   initialComposer,
+  className,
 }: {
   variant:
     | { kind: "politician"; id: string }
@@ -45,6 +47,7 @@ export function PoliticianChatPanel({
   heading: string;
   partyLevel?: boolean;
   initialComposer?: string;
+  className?: string;
 }) {
   const pairs =
     variant.kind === "politician"
@@ -132,7 +135,12 @@ export function PoliticianChatPanel({
   }, [input, pairs]);
 
   return (
-    <div className="flex h-full min-h-[640px] flex-col rounded-2xl border border-border bg-card shadow-card">
+    <div
+      className={cn(
+        "flex h-full min-h-0 flex-1 flex-col rounded-2xl border border-border bg-card shadow-card",
+        className,
+      )}
+    >
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border px-6 py-4">
         <div className="space-y-1">
           <div className="flex flex-wrap items-center gap-2">

@@ -18,13 +18,13 @@ export function ChatComposer({
   suggestions: string[];
 }) {
   return (
-    <div className="space-y-3 border-t border-border bg-card px-4 py-4 md:px-6">
-      <div className="flex flex-wrap gap-2">
+    <div className="space-y-3 border-t border-border bg-card px-4 py-3 md:px-6 md:py-4">
+      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:thin]">
         {suggestions.map((s) => (
           <button
             key={s}
             type="button"
-            className="rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground transition hover:border-primary/40 hover:text-foreground"
+            className="shrink-0 rounded-full border border-border bg-background px-3 py-1.5 text-left text-xs text-muted-foreground transition hover:border-primary/40 hover:text-foreground"
             onClick={() => onChange(s)}
           >
             {s}
@@ -36,8 +36,8 @@ export function ChatComposer({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder="Ask a question…"
-          rows={3}
-          className="min-h-[96px] resize-none rounded-2xl border-border bg-background text-[15px] leading-relaxed shadow-inner"
+          rows={2}
+          className="min-h-[80px] resize-none rounded-2xl border-border bg-background text-[15px] leading-relaxed shadow-inner md:min-h-[96px]"
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();

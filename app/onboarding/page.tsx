@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { StanceBrand } from "@/components/brand/StanceBrand";
 import { TopicIcon } from "@/components/cards/TopicIcon";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -56,9 +57,7 @@ export default function OnboardingPage() {
     <div className="min-h-screen bg-background px-6 py-16 md:px-12">
       <div className="mx-auto max-w-3xl">
         <div className="mb-10 flex items-center justify-between">
-          <Link href="/" className="text-sm font-semibold text-primary">
-            Benchmate
-          </Link>
+          <StanceBrand href="/" />
           <span className="text-xs uppercase tracking-wider text-muted-foreground">
             Step {step} / 3
           </span>

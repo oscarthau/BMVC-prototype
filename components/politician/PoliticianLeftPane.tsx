@@ -46,7 +46,10 @@ export function PoliticianLeftPane({ pol }: { pol: Politician }) {
       <Card className="rounded-3xl border-border bg-card p-6 shadow-card">
         <div className="flex items-start gap-4">
           <Avatar className="h-16 w-16 rounded-2xl border border-border">
-            <AvatarImage src={dicebearAvatar(pol.avatarSeed)} alt="" />
+            <AvatarImage
+            src={dicebearAvatar(pol.avatarSeed)}
+            alt={`Illustrated portrait for ${pol.name}`}
+          />
             <AvatarFallback>{pol.name.slice(0, 2)}</AvatarFallback>
           </Avatar>
           <div className="min-w-0 space-y-2">

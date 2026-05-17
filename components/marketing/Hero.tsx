@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden px-6 pb-24 pt-28 md:px-12 md:pb-32 md:pt-36 lg:px-16">
       <div className="mx-auto max-w-5xl text-center">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
-          Benchmate · CBS exam prototype
+          Stance · CBS exam prototype
         </p>
         <h1 className="mt-6 font-serif text-balance text-[48px] leading-[1.05] tracking-tight text-foreground md:text-[56px] lg:text-[60px]">
           Politics, without the noise.

@@ -47,7 +47,7 @@ export function ChatThread({
 
   return (
     <ScrollArea className="h-full">
-      <div className="flex flex-col gap-6 px-4 py-8 md:px-8">
+      <div className="flex flex-col gap-6 px-4 py-4 md:px-8 md:py-8">
         {messages.map((m) =>
           m.role === "user" ? (
             <div key={m.id} className="flex justify-end">

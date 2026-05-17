@@ -6,6 +6,8 @@ export const STORAGE_KEYS = {
   partyFilter: "bmvc_party_filter_v1",
 } as const;
 
+/** Deterministic illustrated portraits (DiceBear “personas”) — reads like headshots, not initials. */
 export function dicebearAvatar(seed: string) {
-  return `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(seed)}`;
+  const params = new URLSearchParams({ seed });
+  return `https://api.dicebear.com/7.x/personas/svg?${params.toString()}`;
 }

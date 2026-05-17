@@ -19,7 +19,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Benchmate · Politics without the noise",
+  title: "Stance · Politics without the noise",
   description:
     "Ask AI versions of Danish politicians your real questions—with sources, and without the sharp elbows of social media.",
 };

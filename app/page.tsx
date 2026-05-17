@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { StanceBrand } from "@/components/brand/StanceBrand";
 import { Hero } from "@/components/marketing/Hero";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -9,9 +10,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       <header className="flex items-center justify-between px-6 py-6 md:px-12">
-        <Link href="/" className="text-sm font-semibold text-primary">
-          Benchmate
-        </Link>
+        <StanceBrand href="/" />
         <div className="flex gap-3">
           <Button asChild variant="ghost" className="rounded-full">
             <Link href="/politician">Producer demo</Link>

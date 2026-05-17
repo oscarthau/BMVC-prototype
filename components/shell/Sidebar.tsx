@@ -11,6 +11,7 @@ import {
   Users,
 } from "lucide-react";
 
+import { StanceBrand } from "@/components/brand/StanceBrand";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -27,9 +28,7 @@ export function Sidebar() {
 
   return (
     <aside className="hidden w-[240px] shrink-0 flex-col border-r border-border bg-card px-4 py-8 lg:flex">
-      <Link href="/" className="mb-10 px-3 text-sm font-semibold text-primary">
-        Benchmate
-      </Link>
+      <StanceBrand href="/" className="mb-10 px-3" />
       <nav className="flex flex-1 flex-col gap-1">
         {links.map(({ href, label, icon: Icon }) => {
           const active =

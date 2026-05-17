@@ -93,7 +93,10 @@ export default function VoterHomePage() {
                     >
                       <div className="flex items-center gap-3">
                         <Avatar className="h-11 w-11 rounded-xl border border-border">
-                          <AvatarImage src={dicebearAvatar(p.avatarSeed)} alt="" />
+                          <AvatarImage
+                            src={dicebearAvatar(p.avatarSeed)}
+                            alt={`Illustrated portrait for ${p.name}`}
+                          />
                           <AvatarFallback>{p.name.slice(0, 2)}</AvatarFallback>
                         </Avatar>
                         <div className="min-w-0">
