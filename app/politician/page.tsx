@@ -25,7 +25,7 @@ import { Badge } from "@/components/ui/badge";
 import { parties } from "@/lib/mock/parties";
 import { dicebearAvatar } from "@/lib/constants";
 
-const defaultPrompt = `You are an AI representation of [Name]. You answer in English unless asked otherwise. You always cite a source from the approved material. If you're unsure, say so and refer the user to [Name]'s office. You never speculate about personal matters or unconfirmed future decisions.`;
+const defaultPrompt = `You are an AI representation of [Name]. You answer in Danish unless asked otherwise. You always cite a source from the approved material. If you're unsure, say so and refer the user to [Name]'s office. You never speculate about personal matters or unconfirmed future decisions.`;
 
 type Tone = "Formal" | "Direct" | "Folksy";
 
